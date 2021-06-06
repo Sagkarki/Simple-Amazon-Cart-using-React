@@ -18,6 +18,7 @@ function App() {
     
        <CartItems items = {cartItems}/>
        <CartTotal/>
+       <CartTotal items ={cartItems}/>
      </div>
     </div>
   );
