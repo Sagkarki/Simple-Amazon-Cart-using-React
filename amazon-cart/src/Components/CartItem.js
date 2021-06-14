@@ -16,7 +16,7 @@ function CartItem( {item}) {
                 </div>
                 <div className="item-actions">
                     <div className="item-quantity">
-                        <select value={item.quantity}>
+                        <select value={item}>
                   \          <option value="1">Qty: 1</option>
                             <option value="2">Qty: 2</option>
                             <option value="3">Qty: 3</option>

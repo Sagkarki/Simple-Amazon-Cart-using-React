@@ -1,37 +1,29 @@
 import React from 'react'
+import './CartItems.css'
 import CartItem from './CartItem'
 
-function CartItems(props) {
 
-    const changeItemQuantity = (e, index) => {
-        const newItems = [...props.items]
-        newItems[index].quantity = e.target.value;
-        props.setCartItems(newItems);
-    }
-
-    const deleteItem = (indexToDelete) => {
-        const newItems = props.items.filter((value, index)=>{
-            return index !== indexToDelete;
-        })
-        props.setCartItems(newItems);
-    }
+function CartItems({ items }) {
+    console.log(items);
 
     return (
         <div className="CartItems">
             <h1>Shopping Cart</h1>
-            <hr />
-            <div className="CartItems-items">   
-                { props.items.map((item, index) => {
-                    return <CartItem 
-                        key={index} 
-                        id={index}
-                        item={item}
-                        changeItemQuantity={changeItemQuantity}
-                        deleteItem={deleteItem}
-                    />
-                }) }
-            </div>
-        </div>
+            <hr/>
+           <div className="CartItems-items">
+               {items.map((item) =>
+            
+               <CartItem
+               item={item}
+                key = {index}
+               />
+               
+    )}
+           </div>
+         
+         
+       </div> 
+       
     )
 }
 
