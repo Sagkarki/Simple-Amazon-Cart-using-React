@@ -3,10 +3,7 @@ import CartItem from './CartItem'
 
 function CartItems(props) {
 
-    const changeItemQuantity = (e, index) =>  {
-        console.log(e.target.value)
-        console.log("Index is", index);
-        
+    const changeItemQuantity = (e, index) => {
         const newItems = [...props.items]
         newItems[index].quantity = e.target.value;
         props.setCartItems(newItems);
