@@ -6,7 +6,7 @@ function CartTotal({ items }) {
     const getTotalPrice = () => {
         let total = 0;
         items.forEach((item) => {
-            total += (parseFloat(item.price) * item.quantity)
+            total += (item.price) * item.quantity
         })
         return total;
     }
