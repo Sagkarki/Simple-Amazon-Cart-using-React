@@ -1,4 +1,5 @@
 import React from 'react'
+import './CartTotal.css'
 import NumberFormat from 'react-number-format';
 
 function CartTotal({ items }) {
